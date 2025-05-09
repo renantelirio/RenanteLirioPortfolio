@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #0f0f0f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .logo span {
+            color: #00ff88;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero,
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .hero .text,
+        .about .text {
+            max-width: 500px;
+        }
+
+        .hero .text h1,
+        .about .text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .text span,
+        .about .text span,
+        .services h3 span {
+            color: #00ff88;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #00ff88;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .image img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .services .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 0 10px #00ff88;
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #00ff88;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">RNT <span>PORTFOLIO</span></div>
+       
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+<section class="hero fade-in">
+    <div class="text">
+        <h1>I'm Web Designer <span>Renante Lirio</span></h1>
+        <p>Welcome to my personal portfolio! I'm Renante Lirio, a non-professional yet deeply enthusiastic web
+            designer exploring the ever-evolving world of web development and design...</p>
+
+        <!-- Button and Facebook icon aligned horizontally -->
+    <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px;">
+        <a href="#about" class="btn">Learn More</a>
+        
+    </div>
+    <a href="https://www.facebook.com/renante.lirio" target="_blank">
+            <img src="facebook.jpg" alt="Facebook" style="margin-top: 20px;width: 40px; height: 40px; border-radius: 50%;" />
+        </a>
+
+
+            
+
+        </div>
+        <div class="image">
+            <img src="ren-removebg-preview.png" alt="Designer" />
+        </div>
+    </section>
+
+    <section class="about fade-in" id="about">
+        <div class="image">
+            <img src="renante.png" alt="Professional" />
+        </div>
+        <div class="text">
+            <h2><span>NON-PROFESSIONAL</span> WEB DESIGNER</h2>
+            <p>Hi, I’m Renante Lirio. I may not be a professional web designer (yet), but I’m passionate, dedicated, and
+                always willing to learn...</p>
+            <a href="#services" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="services fade-in" id="services">
+        <h3>Our <span>Services</span></h3>
+        <p>Though I am just beginning, my passion drives me, and my focus ensures that every task is accomplished with dedication.
+        The journey may be new, but the commitment to growth and excellence is unwavering.</p>
+        <div class="cards">
+            <div class="card">
+                <div class="icon">💻</div>
+                <h4>Web Design</h4>
+                <p>design websites and simple apps using tools like Figma and Canva—always learning, always improving.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h4>Develop a Website</h4>
+                <p>I develop simple websites and I'm always willing to learn more to improve and get new ideas.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <div class="icon">🖼️</div>
+                <h4>Video Editor</h4>
+                <p>I edit vlogs, weddings, and ads using Premiere Pro, After Effects, and simple apps like CapCut.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer to trigger fade-in on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation starts
+                    }
+                });
+            }, {
+                threshold: 0.5 // Trigger when 50% of the element is in view
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element); // Start observing each element
+            });
+        });
+
+        // Smooth scrolling functionality for buttons
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Scroll to the target section with smooth scroll
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50, // Adjust position slightly for the navbar
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

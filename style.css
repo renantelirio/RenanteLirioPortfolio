@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #0f0f0f;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+.logo span {
+    color: #00ff88;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero,
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.hero .text,
+.about .text {
+    max-width: 500px;
+}
+
+.hero .text h1,
+.about .text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .text span,
+.about .text span,
+.services h3 span {
+    color: #00ff88;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #00ff88;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.image img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.services {
+    text-align: center;
+    padding: 50px;
+}
+
+.services .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #00ff88;
+}
+/* Image with glow effect */
+.image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 15px;
+    /* Optional: adds rounded corners */
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.8);
+    /* Glowing effect */
+    padding: 5px;
+    /* Space for glow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Adding a glowing effect on hover */
+.image:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 136, 1);
+    /* Brighter glow on hover */
+}
+
+/* Image itself */
+.image img {
+    max-width: 300px;
+    border-radius: 10px;
+    /* Optional: make it look better with rounded edges */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Scale up the image slightly when hovered */
+.image:hover img {
+    transform: scale(1.05);
+}
